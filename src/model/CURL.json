@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "7d25d887-408d-4863-ad25-afb6f6f0e338",
+		"name": "CRUD SQLITE3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18233726"
+	},
+	"item": [
+		{
+			"name": "Buy Products",
+			"item": [
+				{
+					"name": "http://localhost:3000/shoppingCart/addProducts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"sdgfsdfsd\",\r\n    \"precio\": 40,\r\n    \"imagen\": \"sdfsdfsfsfsd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/shoppingCart/addProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"shoppingCart",
+								"addProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/shoppingCart",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"sdgfsdfsd\",\r\n    \"precio\": 40,\r\n    \"imagen\": \"sdfsdfsfsfsd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/shoppingCart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"shoppingCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/shoppingCart/successfullyPayment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/shoppingCart/successfullyPayment",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"shoppingCart",
+								"successfullyPayment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "http://localhost:3000/products/addProducts",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"nombre\": \"Impresora4\",\r\n\"marca\": \"Epson\",\r\n\"detalle\": \"Texto ejemplo\",\r\n\"imagen\": \"https://www.abcdin.cl/media/catalog/product/1/1/1152627f13.jpg?optimize=high&fit=bounds&height=&width=&canvas=:\",\r\n\"precio\": 40000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products/addProducts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"addProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/products/deleteProducts?id=12",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/products/deleteProducts?id=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"deleteProducts"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/products/productId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"id\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products/productId",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"productId"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/products/updateProducts?id=12",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"nombre\": \"Impresora4\",\r\n\"marca\": \"Epson\",\r\n\"detalle\": \"Texto ejemplo\",\r\n\"imagen\": \"https://www.abcdin.cl/media/catalog/product/1/1/1152627f13.jpg?optimize=high&fit=bounds&height=&width=&canvas=:\",\r\n\"precio\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/products/updateProducts?id=12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"products",
+								"updateProducts"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "12"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
