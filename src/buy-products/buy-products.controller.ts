@@ -22,4 +22,9 @@ export class BuyProductsController {
     async paymentSuccess() {
       return this.buyProductService.successfullyPayment();
     } 
+
+    @Delete('/deleteProduct')
+    async deleteProduct(@Query('id') id: any) {
+        return this.buyProductService.deleteById(id)
+    }
 }

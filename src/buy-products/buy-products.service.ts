@@ -51,6 +51,28 @@ export class BuyProductsService {
     }
   }
 
+  async deleteById(id: any) {
+    try {
+      const response = await this.buyProductsRepository.delete(id);
+      if (response.affected === 1) {
+        this.logger.debug('Producto eliminado del carrito de compras');
+        return {
+          status: HttpStatus.OK,
+          message: 'Producto eliminado del carrito de compras',
+          details: response,
+        };
+      } else {
+        this.logger.error('No se encontro el id selecionado');
+        throw new Error('No se encontro el id selecionado');
+      }
+    } catch (e) {
+      return {
+        status: HttpStatus.BAD_REQUEST,
+        details: e.message,
+      };
+    }
+  }
+
   async successfullyPayment() {
     try {
       const getAllIds = await this.buyProductsRepository.find()
