@@ -75,10 +75,10 @@ export class BuyProductsService {
 
   async successfullyPayment() {
     try {
-      const getAllIds = await this.buyProductsRepository.find()
-      const payIds = getAllIds.map(id => id.id);
-      const response = await this.buyProductsRepository.delete(payIds);      
-      if (response.affected > 1) {
+      const getAllIds = await this.buyProductsRepository.find();
+      const payIds = getAllIds.map((id) => id.id);
+      const response = await this.buyProductsRepository.delete(payIds);
+      if (response.affected >= 1) {
         this.logger.debug('Pago exitoso');
         return {
           status: HttpStatus.OK,
