@@ -7,5 +7,7 @@ export class BuyProductsDTO {
     @IsNumber()
     precio: number;
     @IsString()
+    cantidad: string;
+    @IsString()
     imagen: string;
 }

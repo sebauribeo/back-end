@@ -9,5 +9,7 @@ export class BuyProductsEntity{
     @Column()
     precio: number;
     @Column()
+    cantidad: string;
+    @Column()
     imagen: string;
 }
